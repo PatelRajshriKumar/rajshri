@@ -1,0 +1,531 @@
+body {
+	font-family: 'Exo', sans-serif;
+}
+
+/* Banner Styling */
+.banner {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("images/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+/* ---- Navbar Styling ---- */
+
+/* Navbar */
+.navbar-inverse {
+	min-height: 100px;
+	border: 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+/* Links of the navbar */
+.navbar-inverse .navbar-nav>li>a {
+    color: #F3F3F3;
+    font-size: 20px;
+    line-height: 110px;
+}
+
+@media (max-width: 992px) {
+	.transparent {
+	   background: transparent;
+	   border-color: transparent;
+	}
+}
+
+/* Collapsed toggle styling */ 
+.navbar-toggle {
+	padding-bottom: 8px;
+	border: 0;
+}
+
+.navbar-toggle .icon-bar {
+	width: 30px;
+	height: 5px;
+	margin: 2px 0;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+	margin-top: 5px;
+}
+
+/* Center elements to the navbar */
+.navbar-nav {
+	width: 100%;
+	text-align: center;
+}
+
+@media (min-width: 992px) {
+	.navbar-nav > li {
+		float: none;
+		display: inline-block;
+	}
+}
+
+@media (max-width: 991px) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left,.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+		display: block;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in{
+		display:block !important;
+	}
+}
+
+/* ---- Hover effect of Nav links ---- */
+.nav-hover a::before,
+.nav-hover a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.nav-hover a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+	color: #FFEF00;
+    font-size: 25px;
+}
+
+.nav-hover a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+	color: #FFEF00;
+    font-size: 25px;
+}
+
+.nav-hover a:hover::before,
+.nav-hover a:hover::after,
+.nav-hover a:focus::before,
+.nav-hover a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/* Languages dropdown styling */
+.dropdown-menu {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.dropdown-menu>li>a {
+	color: white!important;
+}
+
+.dropdown-menu>li>a:hover {
+	background-color: transparent!important;
+}
+
+#languages {
+	background-color: transparent;
+}
+
+/* Change the collapsed navbar styling */
+.navbar-collapse {
+    background-color: rgba(0,0,0,0.3);
+    padding-left: 40px;
+    border-bottom: solid 1px;
+}
+
+@media (max-width: 768px) {
+	.navbar-collapse .dropdown-menu>li>a{
+		font-size: 20px;
+		margin-bottom: 20px;
+		margin-left: -20px;
+	}
+}
+
+/* ---- Banner Styling ---- */
+.btn-resume {
+	background-color: rgb(255, 153, 51);
+	color: white;
+	font-size: 18px;
+	text-indent: 0;
+	padding: 10px 15px;
+	border-radius: 0;
+	margin: 0 0 15px 20px;
+}
+
+/* Styling of the text in the banner */
+.banner-text {
+	text-align: center;
+	font-size: 20px;
+	text-shadow: 1px 1px #959595;
+	color: #F3F3F3;
+	margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+	.banner-text {
+		text-indent: 20px;
+		text-align: left;
+		margin: 80px 20% 120px;
+		border-left: solid;
+	}
+}
+
+.text-big {
+	font-size: 60px;
+}
+
+.text-md2 {
+	font-size: 45px;
+}
+
+.text-md {
+	font-size: 30px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.align-center {
+	margin: 0 auto;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/* ---- Experience Styling ---- */
+.experience {
+	background-color: #F0F0F0;
+	padding: 0 2% 60px;
+	font-size: 16px;
+}
+
+.experience img {
+	max-width: 150px;
+}
+
+.experience-description {
+	padding-left: 30px;
+}
+
+/* ---- Skills Boxes Styling ---- */
+.skills {
+	margin: 0 15px 40px;
+}
+
+@media (min-width: 768px) {
+	.skills {
+		margin: 0 5% 80px;
+	}
+}
+
+@media (min-width: 992px) {
+	.skills {
+		margin: 0 10% 80px;
+	}
+}
+
+/* Center text on the boxes, and style the borders */
+.skill-box {
+	text-align: center;
+	border: 1px;
+	border-style: solid;
+	padding: 20px 0 0;
+	font-size: 20px;
+	box-shadow: 7px 7px 5px 0 rgba(0, 0, 0, 0.3);
+	margin-bottom: 20px;
+	transition: box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.skill-box p {
+	margin: 5px 15px;
+}
+
+.sb-top-icon {
+	width: 80px;
+}
+
+/* Style the button that expand the skill boxes */
+.sb-btn-toggle {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 0;
+	margin-top: 20px;
+	outline: none;
+	width: 100%;
+	border: none;
+	padding-top: 5px;
+}
+
+.sb-btn-toggle .glyphicon-arrow-up {
+	display: none;
+}
+
+/* Skill boxes text styling */
+.skill-box .sb-text {
+	text-align: left;
+	margin: 0;
+	padding: 15px;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ---- Projects styling ---- */
+.projects {
+	background: #F0F0F0;
+	text-align: center;
+	padding: 0 2% 60px;
+	font-size: 18px;
+}
+
+.projects-title {
+	margin: 40px 0 10px;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* HR under title */
+.projects-title+hr{
+	border: 1px solid;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.orange {
+	color: #FF9933;
+}
+
+.blue {
+	color: #1B95DC;
+}
+
+/* Styling of the project's boxes */
+.project-box {
+	margin-top: 30px;
+	border: 1px solid;
+	box-shadow: 7px 7px 5px 0 rgba(0, 0, 0, 0.3);
+	padding-bottom: 15px;
+}
+
+.project-box > hr {
+	border: 1px solid #898989;
+	width: 80%;
+	margin: 10px auto;
+}
+
+.project-box > p {
+	margin-bottom: 0;
+	padding: 0 30px;
+}
+
+/* Put the images as background to be able to crop them */
+.project-img {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 250px;
+}
+
+/* ---- Makes the project picture dimmer and adds "GO TO SITE" text when hover ---- */
+/* Portfolio */
+.p-img-1 {
+	background-image: url("images/banner.jpg");
+}
+
+.p-img-1:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/banner.jpg");
+}
+
+/* DroneUnex */
+.p-img-2 {
+	background-image: url("images/drone.jpg");
+}
+
+.p-img-2:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/drone.jpg");
+}
+
+/* Drone Collision */
+.p-img-3 {
+	background-image: url("images/collision.jpg");
+}
+
+.p-img-3:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/collision.jpg");
+}
+
+/* Snake */
+.p-img-4-1 {
+	background-image: url("images/snake1.jpg");
+}
+
+.p-img-4-1:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/snake1.jpg");
+}
+
+.p-img-4-2 {
+	background-image: url("images/snake2.jpg");
+}
+
+.p-img-4-2:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/snake2.jpg");
+}
+
+.p-img-4-3 {
+	background-image: url("images/snake3.jpg");
+}
+
+.p-img-4-3:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/snake3.jpg");
+}
+
+.p-img-5 {
+	background-image: url("images/robot.jpg");
+}
+
+.p-img-5:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/robot.jpg");
+}
+
+.p-img-6 {
+	background-image: url("images/fpga.jpg");
+}
+
+.p-img-6:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/fpga.jpg");
+}
+
+.p-img-7 {
+	background-image: url("images/caelike.png");
+}
+
+.p-img-7:hover {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("images/caelike.png");
+}
+
+.project-img::after {
+	content: "View";
+	color: white;
+	line-height: 250px;
+	font-size: 50px;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.project-img:hover::after {
+	opacity: 1;
+}
+
+.box-active {
+	box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Contact Styling ---- */
+.contact {
+	background: rgb(255, 153, 51);
+	padding: 5%;
+	text-align: center;
+	font-size: 24px;
+}
+
+@media (min-width: 768px) {
+	.contact {
+		text-align: left;
+	}
+}
+
+.contact-box {
+	border: 3px solid;
+	background: white;
+	box-shadow: 15px 15px 20px 5px rgba(0, 0, 0, 0.3);
+	padding-bottom: 30px;
+}
+
+.contact-box .img-responsive {
+	max-height: 300px;
+	margin-top: 0;
+}
+
+.contact-title {
+	margin: 40px 0 0;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+	.contact-title {
+		margin-left: 25%;
+		margin-bottom: 20px;
+	}
+}
+
+.contact-icon {
+	width: 25px;
+}
+
+.scrollToTop{
+	width: 50px;
+	text-align: center;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid;
+	opacity: 0.8;
+}
+
+/* ---- Footer Styling ---- */
+.footer {
+	background-color: black;
+	color: white;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.footer img {
+	max-width: 40px;
+}
+
+.footer-links {
+	color: white;
+	font-size: 1.1em;
+	margin-left: 10px;
+	margin-right: 10px;
+}
